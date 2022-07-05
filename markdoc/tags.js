@@ -1,3 +1,4 @@
+import Markdoc from '@markdoc/markdoc';
 import { Callout } from '@/components/Callout'
 import { LinkGrid } from '@/components/LinkGrid'
 
@@ -28,6 +29,20 @@ const tags = {
         <figcaption>{caption}</figcaption>
       </figure>
     ),
+  },
+  'definition-list': { render: 'dl' },
+  definition: {
+    attributes: {
+      term: { type: String },
+    },
+    transform(node, config) {
+      var children = node.transformChildren(config);
+
+      return [
+        new Markdoc.Tag('dt', {}, node.attributes.term),
+        new Markdoc.Tag('dd', {}, children[0].children),
+      ];
+    },
   },
   'link-grid': {
     render: LinkGrid,
