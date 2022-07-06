@@ -15,7 +15,7 @@ export function PresetsIcon({ id, color }) {
           gradientTransform="matrix(0 22.75 -22.75 0 16 6.25)"
         />
       </defs>
-      <LightMode>
+      <LightMode className={undefined}>
         <circle cx={20} cy={12} r={12} fill={`url(#${id}-gradient)`} />
         <g
           className="fill-[var(--icon-background)] stroke-[color:var(--icon-foreground)]"
@@ -30,7 +30,7 @@ export function PresetsIcon({ id, color }) {
           <path d="M3 25v2a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2Z" />
         </g>
       </LightMode>
-      <DarkMode fill={`url(#${id}-gradient-dark)`}>
+      <DarkMode fill={`url(#${id}-gradient-dark)`} className={undefined}>
         <path
           fillRule="evenodd"
           clipRule="evenodd"

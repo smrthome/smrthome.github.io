@@ -20,7 +20,7 @@ export function PluginsIcon({ id, color }) {
           gradientTransform="matrix(0 14 -14 0 16 10)"
         />
       </defs>
-      <LightMode>
+      <LightMode className={undefined}>
         <circle cx={20} cy={20} r={12} fill={`url(#${id}-gradient)`} />
         <g
           fillOpacity={0.5}
@@ -47,7 +47,7 @@ export function PluginsIcon({ id, color }) {
           <path d="M20 5c0 1.105-2.239 2-5 2s-5-.895-5-2m10 0c0-1.105-2.239-2-5-2s-5 .895-5 2m10 0v3c0 1.105-2.239 2-5 2s-5-.895-5-2V5" />
         </g>
       </LightMode>
-      <DarkMode strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <DarkMode strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={undefined}>
         <path
           d="M17.676 3.38a3.887 3.887 0 0 0-3.352 0l-9 4.288C3.907 8.342 3 9.806 3 11.416v9.168c0 1.61.907 3.073 2.324 3.748l9 4.288a3.887 3.887 0 0 0 3.352 0l9-4.288C28.093 23.657 29 22.194 29 20.584v-9.168c0-1.61-.907-3.074-2.324-3.748l-9-4.288Z"
           stroke={`url(#${id}-gradient-dark-1)`}
