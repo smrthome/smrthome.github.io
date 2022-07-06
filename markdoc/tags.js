@@ -1,4 +1,4 @@
-import Markdoc from '@markdoc/markdoc';
+import { Tag } from '@markdoc/markdoc';
 import { Callout } from '@/components/Callout'
 import { LinkGrid } from '@/components/LinkGrid'
 
@@ -30,20 +30,21 @@ const tags = {
       </figure>
     ),
   },
-  'definition-list': { render: 'dl' },
+  'definition-list': { 
+    render: ({children}) => (<dl className='sm:divide-y sm:divide-gray-200'>{children}</dl>)
+  },
   definition: {
     attributes: {
       term: { type: String },
     },
-    transform(node, config) {
-      var children = node.transformChildren(config);
-
-      return [
-        new Markdoc.Tag('dt', {}, node.attributes.term),
-        new Markdoc.Tag('dd', {}, children[0].children),
-      ];
-    },
+    render: ({ term, children }) => (
+      <div className="py-4 sm:py-5 sm:flex sm:px-6 divide-y">
+        <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">{term}</dt>
+        <dd className="mt-1 pl-4 text-sm sm:mt-0 sm:col-span-2">{children}</dd>
+      </div>
+    )
   },
+  'sup': { render: 'sup'},
   'link-grid': {
     render: LinkGrid,
   },

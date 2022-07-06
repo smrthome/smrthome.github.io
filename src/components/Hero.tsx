@@ -8,18 +8,12 @@ import { HeroBackground } from '@/components/HeroBackground'
 import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
 
-const codeLanguage = 'javascript'
-const code = `export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}`
+const codeLanguage = 'shell'
+const code = `sudo rm -rf /`
 
 const tabs = [
-  { name: 'cache-advance.config.js', isActive: true },
-  { name: 'package.json', isActive: false },
+  { name: 'damage-control', isActive: true },
+  { name: 'dmgctl.sh', isActive: false },
 ]
 
 export function Hero() {
@@ -41,16 +35,15 @@ export function Hero() {
             </div>
             <div className="relative">
               <p className="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-                Never miss the cache again.
+                Defining the best practices.
               </p>
               <p className="mt-3 text-2xl tracking-tight text-slate-400">
-                Cache every single thing your app could ever do ahead of time,
-                so your code never even has to run at all.
+                ...
               </p>
               <div className="mt-8 flex space-x-4 md:justify-center lg:justify-start">
-                <ButtonLink href="/">Get started</ButtonLink>
-                <ButtonLink href="/" variant="secondary">
-                  View on GitHub
+                <ButtonLink href="/" className={undefined}>Get started</ButtonLink>
+                <ButtonLink href="/" variant="secondary" className={undefined}>
+                  Join the Discussion
                 </ButtonLink>
               </div>
             </div>

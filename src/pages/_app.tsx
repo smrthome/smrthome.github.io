@@ -11,16 +11,28 @@ const navigation = [
     title: 'Introduction',
     links: [
       { title: 'Getting started', href: '/' },
-      { title: 'Installation', href: '/docs/installation' },
+    ],
+  },
+  {
+    title: 'Networking',
+    links: [
+      { title: 'Backbone of the Smart Home', href: '/docs/networking/introduction' },
+      { title: 'Security fundimentals', href: '/docs/networking/network-security' },
+      { title: 'Designing for the future', href: '/docs/networking/network-design' },
     ],
   },
   {
     title: 'Other',
     links: [
-      { title: 'Glossery', href: '/docs/glossery' },
-      { title: 'How to contribute', href: '/docs/how-to-contribute' },
-      { title: 'Architecture guide', href: '/docs/architecture-guide' },
-      { title: 'Design principles', href: '/docs/design-principles' },
+      { title: 'Glossary of Terms', href: '/docs/glossary' },
+    ],
+  },
+  {
+    title: 'Contributing',
+    links: [
+      { title: 'How to contribute', href: '/docs/contributing/how-to-contribute' },
+      { title: 'Architecture guide', href: '/docs/contributing/architecture-guide' },
+      { title: 'Design principles', href: '/docs/contributing/design-principles' },
     ],
   },
 ]
