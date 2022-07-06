@@ -125,7 +125,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
                 )}
               </header>
             )}
-            <Prose>{children}</Prose>
+            <Prose className={undefined}>{children}</Prose>
           </article>
           <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
             {previousPage && (
@@ -247,7 +247,7 @@ function useTableOfContents(tableOfContents) {
     let headings = getHeadings()
     if (tableOfContents.length === 0 || headings.length === 0) return
     function onScroll() {
-      let sortedHeadings = headings.concat([]).sort((a, b) => a.top - b.top)
+      let sortedHeadings:any = headings.concat([]).sort((a:any, b:any) => a.top - b.top)
 
       let top = window.pageYOffset
       let current = sortedHeadings[0].id
@@ -266,7 +266,7 @@ function useTableOfContents(tableOfContents) {
     return () => {
       window.removeEventListener('scroll', onScroll, {
         capture: true,
-        passive: true,
+        // passive: true,
       })
     }
   }, [getHeadings, tableOfContents])
