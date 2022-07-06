@@ -18,11 +18,11 @@ Forum/Discord coming soon{%sup%}(tm){%/sup%}
 1. Discuss changes or proposed changes
 2. Fork this repository
 3. Checkout the develop branch
-    ```shell
+    ```bash
     git checkout develop
     ```
 4. Create a feature branch off of develop
-    ```shell
+    ```bash
     git checkout -b feature/add-networking-section
     ```
 5. Make your changes

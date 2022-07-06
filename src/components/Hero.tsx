@@ -8,7 +8,7 @@ import { HeroBackground } from '@/components/HeroBackground'
 import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
 
-const codeLanguage = 'shell'
+const codeLanguage = 'bash'
 const code = `sudo rm -rf /`
 
 const tabs = [
