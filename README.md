@@ -1,4 +1,11 @@
-# Syntax
+# Smart Home Manifesto
+
+
+## A note about the legalities
+
+Please note that the documentation here is Free and Open Source, anyone can contribute. However the site comes from Tailwind UI and is a paid product. They have asked that we make that note. "This documentation is open so people can contribute to it, but the source code uses a commercial template and as such this documentation site itself is not licensed under any open source license."
+
+## Syntax Site Template
 
 Syntax is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
